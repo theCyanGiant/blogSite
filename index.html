@@ -6,10 +6,20 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/blog.css" media="screen" title="no title" charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script id="blogs-tpl" type="text/x-handlebars-template">
+      {{#each blog}}
+      <div class="blog-post">
+        <h2 class="blog-post-title"><a href="#">{{title}}</a></h2>
+        <p class="blog-post-meta">At time by an author</p>
+        <div>{{{content}}}</div>
+      </div>
+      {{/each}}
+    </script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/blog.js" charset="utf-8"></script>
     <script src="//www.parsecdn.com/js/parse-1.5.0.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js" charset="utf-8"></script>
+
   </head>
   <body>
     <div class="blog-masthead">
@@ -30,33 +40,16 @@
 
       <div class="row">
         <div class="col-sm-8 blog-main">
+          <div class="main-container">
 
-        <!-- SAMPLE FORMAT
-          <div class="blog-post">
-            <h2 class="blog-post-title">new blog post</h2>
-            <p class="blog-post-meta">date<a href="about.html">James</a></p>
-            <p></p>
-          </div> <!=end post=>
-          END SAMPLE -->
+          </div>
 
-          <div class="blog-post">
-            <h2 class="blog-post-title">My Very First Post</h2>
-            <p class="blog-post-meta">August 27, 2015 by <a href'about.html'>James</a></p>
-
-            <p>WOO HOO! Welcome to my very first blog post!</p>
-            <hr>
-            <p>Yes, I have been saying for <em>years</em> that I will start a blog.  Well now that I am sharpening my skillset in web development I really have no excuse <strong>not to</strong>. To start off with, I fully expect this site to change, and grow with what I am learning and doing.  As of right now I am using <a href="http://getbootstrap.com/">Bootstrap</a> as a tool to create this blog, and in particular I am using their <a href="http://getbootstrap.com/examples/blog/">example blog</a> as a template.  Right this very second this blog is going to look a whole lot like the example.  This will be a <em>temporary</em> state as I continue to add and develop ideas for what I want this site to be. </p>
-            <h2>Where it's at</h2>
-            <p>My life is in an exciting period of flux at the moment.  I have finally decided to move away from the damned service industry, and actually put this big, grey, mushy mass in my skull to some form of productive use. I started attending courses at <a href="https://www.codefellows.org/">Code Fellows</a> here in Seattle. So far I have learned the basics of web development with my interest and point of study being on javascript.  I have also learned HTML & CSS within the same courses. </p>
-            <hr><h3>But Why?</h3><hr>
-            <p>I have been needing some movement in my life for a while, and it finally is time.  I am getting <a href="https://www.theknot.com/us/james-bennett-and-tina-marissa-riopel-jan-2016">married</a> soon, and that cetainly is one of my reasons for the change.  I also feel that I need to have something to show for my work.  I love producing things; from being a baker to being a draftsperson, I have always loved having something to show for my work, and I've missed it.  Learning logic through javascript/ jQuery has opened a door to whole new world of creative possibilities. Even more fundamental to me than all that is that I want to do something that I can hang my hat on, to have a level of respect for myself through my work that service can't provide (at least, not for me). </p>
-          </div><!--- End First Post-->
-          <nav>
+          <!-- <nav>
             <ul class="pager">
               <li><a href="#">Previous</a></li>
               <li><a href="#">Next</a></li>
             </ul>
-          </nav>
+          </nav> -->
 
         </div><!--End Main Blog-->
 
